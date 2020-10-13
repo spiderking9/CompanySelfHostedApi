@@ -28,7 +28,7 @@ namespace WebApi.Controllers
         public async Task<ActionResult<IEnumerable<Company>>> GetTodoItems(Search search)
         {
             if (search.EmployeeJobTitles == null) return BadRequest(new { message = "wrong format EmployeeJobTitles" });
-            return await _context.Companyes
+            return await _context.Companyes.Include(m=>m.Employees)
                 .Where(x => x.Employees.Any(w => w.FirstName.Contains(search.Keyword))
                 || x.Name.Contains(search.Keyword)
                 || x.Employees.Any(w => w.LastName.Contains(search.Keyword)))
