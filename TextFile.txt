@@ -1,0 +1,19 @@
+﻿{
+    "id": "a78cdcd3-54b4-40c0-bc18-25fe061ca02d",
+    "name": "sdfsdf",
+    "establishmentYear": 0,
+    "employees": [
+        {
+            "FirstName": "sdfg",
+            "LastName": "sdfs",
+            "DateOfBirth": "2017-11-01T00:00:00",
+            "JobTitle": "Architect"
+        },
+        {
+            "FirstName": "Marek",
+            "LastName": "Soltys",
+            "DateOfBirth": "2017-01-01T00:00:00",
+            "JobTitle": "Developer"
+        }
+    ]
+}
