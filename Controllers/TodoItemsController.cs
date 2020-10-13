@@ -34,7 +34,7 @@ namespace WebApi.Controllers
                 || x.Employees.Any(w => w.LastName.Contains(search.Keyword)))
                 .Where(x2 => x2.Employees.Any(w2 => search.EmployeeDateOfBirthFrom == null || w2.DateOfBirth > search.EmployeeDateOfBirthFrom))
                 .Where(x2 => x2.Employees.Any(w2 => search.EmployeeDateOfBirthTo == null || w2.DateOfBirth < search.EmployeeDateOfBirthTo))
-                .Where(x3 => search.EmployeeJobTitles.Count == 0 || x3.Employees.Any(w3 => search.EmployeeJobTitles.Contains(w3.JobTitle)))
+                .Where(x3 => search.EmployeeJobTitles.Count == 0 || x3.Employees.Any(w3 => search.EmployeeJobTitles.Contains(w3.JobTitleString)))
                 .ToListAsync();
         }
 
